@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bussiness Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheet.css">
+</head>
+<body>
+    <div id="entity">
+        <div id="header">
+            <div class="image-box">
+                <div id="content">Bussiness Search</div>
+                <div id="sub-content">Fill out the form to get bussiness near you!</div>
+            </div>
+        </div>
+        <div id="form-to-fill">
+            <form id="form-to-submit">
+                <label for="keyword">Keyword<sup class="multi-sign">*</sup></label><br>
+                <input type="text" id="keyword" name="key" required="required"><br>
+                <label for="distance" id="dis-label">Distance(miles)</label>
+                <label for="catagory">Catagory<sup class="multi-sign">*</sup></label><br>
+                <input type="text" id="distance" name="distance" value="10">
+                
+                <select name="catagory" id="catagory" required="required">
+                    <option value="All">Default</option>
+                    <option value="Arts &amp; Entertainment">Arts &amp; Entertainment</option>
+                    <option value="Health &amp; Medical">Health &amp; Medical</option>
+                    <option value="Hotels &amp; Travel">Hotels &amp; Travel</option>
+                    <option value="food">Food</option>
+                    <option value="Professional Services">Professional Services</option>
+                </select><br>
+                <label for="location">Location<sup class="multi-sign">*</sup></label>
+                <input type="text" id="location" required="required"><br>
+                <hr>
+                <p id="auto-location">Want us to auto-detect your location? Check here <input type="checkbox" id="auto-location-check" autocomplete="off"></p>
+                 
+            </form>
+                <button form="form-to-submit" id="submit">SUBMIT</button>
+                <button id="clear" onclick="searchClear()">CLEAR</button>
+        </div>
+    </div>
+    <div id="wrongTag"></div>
+    <div class="returned-table-field" id="move-here">
+        <table class="returned-table">
+            <thead id="headers-to-add">
+                <!-- <tr>
+                    <th class="table-header">No.</th>
+                    <th class="table-header">Image</th>
+                    <th class="table-header">Bussiness Name</th>
+                    <th class="table-header">Rating</th>
+                    <th class="table-header">Distance(miles)</th>
+                </tr> -->
+                
+            </thead>
+            <tbody id="result-body">
+            </tbody>
+        </table>
+    </div>
+    <div class="detail-page" id="move-here-two">
+        <!-- <div class="detail-container">
+            <div id="contain-message">
+                <div class="contain-line">
+                    <div class="detail-content">Status</div><div class="detail-content">Category</div>
+                </div>
+                <div class="contain-line">
+                    <div class="detail-value"><button id="status-button-open">Open Now</button></div><div class="detail-value">category</div>
+                </div>
+                <div class="contain-line">
+                    <div class="detail-content">Adress</div><div class="detail-content">Phone Number</div>
+                </div>
+                <div class="contain-line">
+                    <div class="detail-value">address</div><div class="detail-value">phone number</div>
+                </div>
+                <div class="contain-line">
+                    <div class="detail-content">Tansactions Supported</div><div class="detail-content">Price</div>
+                </div>
+                <div class="contain-line">
+                    <div class="detail-value">transactions supported</div><div class="detail-value">price</div>
+                </div>
+                <div class="contain-line">
+                    <div class="detail-content">More Info</div>
+                </div>
+                <div class="contain-line">
+                    <div class="detail-value">more info</div>
+                </div> 
+                        
+                        
+                        
+            </div>
+                
+                
+        -->
+           
+            <!-- <div class="pic-container">
+                <div class="picDiv">
+                    <img src="./banner.jpeg" alt="">
+                    <div>photo1</div>
+                </div>
+                <div class="picDiv">
+                    <img src="./banner.jpeg" alt="">
+                    <div>photo2</div>
+                </div>
+                <div class="picDiv">  
+                    <img src="./banner.jpeg" alt="">
+                    <div>photo3</div>
+                </div>
+                
+                
+            </div> -->
+        </div> 
+    </div>
+    <script src="./manipulate.js"></script>
+</body>
+</html>
